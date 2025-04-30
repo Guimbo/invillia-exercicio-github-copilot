@@ -5,6 +5,79 @@
   font-family: Arial, sans-serif;
 }
 
+.participant-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.participant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.participant-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a237e;
+}
+
+.participant-card .info {
+  flex: 1;
+}
+
+.participant-card .info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #1a237e;
+}
+
+.participant-card .info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.participant-card .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.participant-card .actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.participant-card .actions .edit {
+  background-color: #0066cc;
+  color: white;
+}
+
+.participant-card .actions .edit:hover {
+  background-color: #005bb5;
+}
+
+.participant-card .actions .delete {
+  background-color: #c62828;
+  color: white;
+}
+
+.participant-card .actions .delete:hover {
+  background-color: #b71c1c;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
