@@ -98,6 +98,10 @@ def signup_for_activity(activity_name: str, email: str):
     # Obter a atividade específica
     activity = activities[activity_name]
 
+    # Verificar se o limite de participantes foi atingido
+    if len(activity["participants"]) >= activity["max_participants"]:
+        raise HTTPException(status_code=400, detail="Activity is full")
+
     # Verificar se o aluno já está inscrito
     if email in activity["participants"]:
         raise HTTPException(status_code=400, detail="Student already signed up for this activity")
